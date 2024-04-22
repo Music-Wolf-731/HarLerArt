@@ -1,0 +1,66 @@
+@import "var.css";
+
+body {
+    background:var(--Pagebackground) !important;
+}
+
+#TopBar{
+    background: var(--main-color);
+    width:100%;
+    position: fixed;
+    top: 0;
+}
+#main_vis_wall {
+    overflow:hidden;
+    width:100%;
+}
+.backgroundBox{
+    position: fixed;
+    top: 0;left: 0;
+    z-index: -1;
+}
+
+.backgroundBox > div:first-child {
+    position: absolute;
+    top: 0;left: 0;
+    width: 100vw;
+    height: 100vh;
+    background:  var(--Pagebackground_c);
+    opacity: .98;
+    z-index: 1;
+    
+}
+
+.video-background {
+    position: absolute;
+    top: 0;left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-background video {
+    position: absolute;
+    top: 70%;
+    left: 65%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
+
+#TopBar a{
+    color: white;
+}
+
+.modal-content > button {
+    position: absolute;
+    right:0;
+}
+
+@media screen and (min-width: 1000px) {
+    /* #main_vis_wall {width:70%;} */
+}
