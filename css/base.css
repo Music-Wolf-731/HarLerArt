@@ -2,6 +2,7 @@
 
 body {
     background:var(--Pagebackground) !important;
+    display:flex;flex-wrap: wrap;
 }
 
 #TopBar{
@@ -14,6 +15,113 @@ body {
     overflow:hidden;
     width:100%;
 }
+
+
+#ContentDisplay > div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width:100%;
+}
+
+#LandPangeMakerBrief {
+    color: var(--main-text-color);
+    margin:.8em 0;
+    display:flex;
+    align-items: center;
+    width:100%;
+    background: var(--Pagebackground_d);
+}
+
+#LandPangeMakerBrief > .ImgBox{
+    width:calc(var(--L_Size_unit));height: calc(var(--L_Size_unit));
+    border-radius: 10px;
+    margin: .5em;
+    /* background:black; */
+    background-image: url('../media/116369272_p1.png');
+    background-size:cover;
+}
+
+#LandPangeMakerBrief > .TextBox{
+    width:calc(100% - calc(var(--L_Size_unit))); 
+    height: calc(var(--L_Size_unit));
+    flex-direction: column;
+    margin: .5em;
+    display:flex;
+    /* background:white; */
+}
+
+#LandPangeMakerBrief h2 {
+    color: var(--TitleText); 
+    opacity: var(--hidden);
+    margin:.35em;
+    font-size: 1.5em;
+}
+
+#LandPangeMakerBrief .TalkTextBox{
+    width:100%;
+    max-height: calc(100% - 1.85em - 2px);
+    overflow-y: scroll;
+    scrollbar-width: none;
+
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+}
+
+#LandPangeMakerBrief p {
+    margin:0;
+    color: var(--ContentText);
+    opacity: var(--hidden);
+    font-size: calc(var(--L_Size_unit) / 13 + 8px);
+}
+
+#LandPangeMakerBrief .line {
+    height:2px;
+    width:100%;
+    background:  linear-gradient(90deg, rgb(187, 86, 255) 40%, rgba(187, 21, 252, 0.559) 60%,  rgba(255, 255, 255, 0) 100%);
+}
+
+.TextPane {
+    opacity: .4;
+    transition: all 0.5s ease;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    width:96%;
+    padding: 10px;
+    margin:10px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.TextPane:hover {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.TextPane div {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.TextPane div:nth-child(2){
+    border-top: .3px solid #ffffff90;
+}
+
+.TextPane h3{
+    font-size: 1.3em;
+    text-align: center;
+    color: var(--main-text-color);
+}
+
+.TextPane p{
+    margin:.8em;
+    color:rgba(255, 255, 255, 0.632);
+}
+
 .backgroundBox{
     position: fixed;
     top: 0;left: 0;
@@ -53,7 +161,7 @@ body {
 }
 
 #TopBar a{
-    color: white;
+    color:  var(--main-text-color);
 }
 
 .modal-content > button {
@@ -61,6 +169,16 @@ body {
     right:0;
 }
 
-@media screen and (min-width: 1000px) {
-    /* #main_vis_wall {width:70%;} */
+
+#PageDisplay {
+    width: 60%;
+    color: var(--main-text-color);
+}
+#SideMenu{
+    width: 40%;
+}
+
+@media screen and (max-width: 1000px) {
+    #PageDisplay,#SideMenu{width:100%;}
+
 }

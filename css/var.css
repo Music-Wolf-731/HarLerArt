@@ -1,6 +1,31 @@
 
 :root {
+    --hidden:1 ;
+
     --main-color: rgb(17, 5, 26);
+    --main-text-color: white;
     --Pagebackground: rgb(46, 6, 55);
-    --Pagebackground_c: linear-gradient(105deg, rgb(46, 6, 55) 75%,  rgba(46, 6, 55, 0.96) 100%);
+    --TitleText: rgb(246, 209, 254);
+    --ContentText: rgb(213, 127, 233);
+
+    --Pagebackground_c: linear-gradient(105deg, rgb(46, 6, 55) 50%,rgb(46, 6, 55,0.8) 80%,  rgba(46, 6, 55, 0.6) 100%);
+    --Pagebackground_d: linear-gradient(90deg, rgba(154, 25, 183, 0.39) 30%,rgba(124, 13, 149, 0.24) 70%,  rgba(236, 150, 255, 0) 85%);
+    --L_Size_unit: calc(var(--PageDisplayWidth) * .25);
+    --Margin_unit: 1vw;
+
+    
+    
+    --PageDisplayWidth: 0px; /* 可變值 */
+    --PageDisplayWidth-Space: 8px; 
+    --ForImgPain:calc(var(--PageDisplayWidth) / 4);
+
+    @media screen and (max-width: 1000px) {
+        --Margin_unit: .2vw; 
+    }
+
+    @media screen and (max-width: 600px) {
+        --ForImgPain:calc(var(--PageDisplayWidth) / 2);
+    }
+    
   }
+

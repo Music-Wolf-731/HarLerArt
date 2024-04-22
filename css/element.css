@@ -1,0 +1,22 @@
+#GalleryPainWindow{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+.GalleryPain{
+    background: rgba(0, 0, 0, 0.354);
+    margin:calc(var(--PageDisplayWidth-Space) * 1.5) 0 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.GalleryPain .ImgBox {
+    width:calc(var(--ForImgPain) - var(--PageDisplayWidth-Space));
+    height:calc(var(--ForImgPain) - var(--PageDisplayWidth-Space));
+    background-size:cover;
+}
+.GalleryPain h3{
+    font-size:1.3em;
+    margin: .2em .5em ;
+}
