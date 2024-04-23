@@ -79,6 +79,12 @@
   <button type="button" class="btn btn-outline-light">AAA</button>
 </div>
 
+ 
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+
+
 
 <?php WriteTest($UsePrint);?>
 
@@ -109,6 +115,23 @@
   </div>
 </div> -->
 
+
+<div class="modal fade" id="exampleModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-xl">
+    <div style="background:var(--Pagebackground);" class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Modal 1</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img style="width:100%;" src="../media/gallery/1110420瀞吾.png" alt="">
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Open second modal</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 </body>

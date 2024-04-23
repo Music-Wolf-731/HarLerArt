@@ -83,17 +83,20 @@ body {
 }
 
 .TextPane {
+    position: relative;
     opacity: .4;
     transition: all 0.5s ease;
     display: flex;
     align-items: center;
-    flex-direction: column;
     overflow: hidden;
     width:96%;
     padding: 10px;
     margin:10px;
     border-radius: 10px;
     background: rgba(0, 0, 0, 0.4);
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .TextPane:hover {
@@ -107,11 +110,43 @@ body {
     flex-direction: column;
 }
 
-.TextPane div:nth-child(2){
-    border-top: .3px solid #ffffff90;
+.TextPane div:nth-child(1){
+    width:calc(100% - 3em);
 }
 
+.TextPane div:nth-child(2){
+    position: absolute;
+    z-index: 2;
+    width:30px;height:30px;
+    border: 2.5px solid white;
+    border-radius: 10px;
+    right:1.2em;top:.5em;
+    background: rgba(255, 255, 255, 0);
+    transition: all 0.5s ease;
+}
+
+
+.TextPane div:nth-child(2):hover{
+    background: rgba(255, 255, 255);
+    border: 0px solid white;
+}
+
+.TextPane div:nth-child(3){
+    margin: 5px 0 0;
+    border-top: .3px solid #ffffff90;
+    width:100%;
+}
+
+.TextPane .talkEventbox{
+    width:100%;height:100%;
+    position: absolute;
+    top:0;left:0;
+    z-index: 1;
+}
+
+
 .TextPane h3{
+    margin:.05em 0;
     font-size: 1.3em;
     text-align: center;
     color: var(--main-text-color);
@@ -176,6 +211,10 @@ body {
 }
 #SideMenu{
     width: 40%;
+}
+
+.btn-close{
+    filter: invert(100%);
 }
 
 @media screen and (max-width: 1000px) {
