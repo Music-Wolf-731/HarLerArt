@@ -84,7 +84,7 @@
                     <div></div>
                     <div class="video-background">
                         <video autoplay loop muted>
-                            <source src="'.$GLvar.'media/background.mp4" type="video/mp4">
+                            <source src="https://wolf-test-box.s3.ap-northeast-1.amazonaws.com/HarlerArt/video_gif/background.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>

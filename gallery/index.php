@@ -24,18 +24,18 @@
 <?php
 
   $UsePrint = [
-    ['1110420瀞吾.png','累','content'],
-    ['利特族的夜晚.png','煩','content'],
-    ['1110420瀞吾.png','討厭','content'],
-    ['利特族的夜晚.png','為甚麼','content'],
-    ['1110420瀞吾.png','他們','content'],
-    ['利特族的夜晚.png','這麼噁心','content'],
-    ['1110420瀞吾.png','我恨這一切','content'],
-    ['利特族的夜晚.png','我要休息','content'],
-    ['1110420瀞吾.png','Title','content'],
-    ['利特族的夜晚.png','Title','content'],
-    ['1110420瀞吾.png','Title','content'],
-    ['利特族的夜晚.png','Title','content'],
+    ['1110420瀞吾.png','瀞浯','content'],
+    ['利特族的夜晚.png','利特族之夜','content'],
+    ['113627901_p0.png','夜戰鹿角惡魔','content'],
+    ['1130226Naz.png','洞湖','content'],
+    ['113627812_p0.png','伯爵情境圖','content'],
+    ['02.png','場景嘗試','content'],
+    ['01.png','岸邊小屋','content'],
+    ['1120706角色設計_2.png','伯爵設定','content'],
+    ['113628571_p0.png','橋邊','content'],
+    ['113960788_p0.jpg','場景練習','content'],
+    ['113628025_p0.png','地下城','content'],
+    ['113627962_p0.png','衝突','content'],
   ];
 
   
@@ -43,10 +43,12 @@
   function WriteTest($arr){
     $ForReturn ='';
     foreach ($arr as $key => $value) {
+
+    $jsVar = '';
       
     $ForReturn .= "
-        <div class=\"GalleryPain\">
-          <div class=\"ImgBox\" style=\"background-image: url('../media/gallery/$value[0]');\"></div>
+        <div class=\"GalleryPain\"".' class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="DisplayMyImg(\''.$value[0].'\')"'.">
+          <div class=\"ImgBox\" style=\"background-image: url('https://wolf-test-box.s3.ap-northeast-1.amazonaws.com/HarlerArt/$value[0]');\"></div>
           <div><h3>$value[1]</h3></div>
         </div>
       
@@ -71,18 +73,6 @@
     </div>
 </div>
 
-
-<div id="Gallery">
-  <button type="button" class="btn btn-outline-light">AAA</button>
-  <button type="button" class="btn btn-outline-light">AAA</button>
-  <button type="button" class="btn btn-outline-light">AAA</button>
-  <button type="button" class="btn btn-outline-light">AAA</button>
-</div>
-
- 
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button>
 
 
 
@@ -124,7 +114,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <img style="width:100%;" src="../media/gallery/1110420瀞吾.png" alt="">
+        <img id="DisplayArtImg" style="width:100%;" src="../media/gallery/1110420瀞吾.png" alt="">
       </div>
       <div class="modal-footer">
         <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Open second modal</button>
@@ -135,7 +125,12 @@
 
 
 </body>
-
+<script>
+  function DisplayMyImg(Img) {
+    var imgElement = document.getElementById('DisplayArtImg');
+    imgElement.src = "https://wolf-test-box.s3.ap-northeast-1.amazonaws.com/HarlerArt/"+Img;
+  }
+</script>
 
 
 <?php $DisplayFunction -> footer() ?>
