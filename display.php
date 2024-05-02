@@ -92,6 +92,41 @@
             ';
         }
 
+        public function TalkFunction(){
+            echo '
+                <script>
+                let TalkBoxTimeOutIds = [];
+                function clearAllTimeouts() {
+                    for (let i = 0; i < TalkBoxTimeOutIds.length; i++) {
+                        clearTimeout(TalkBoxTimeOutIds[i]);
+                    }
+                    TalkBoxTimeOutIds = [];
+                }  
+                function printSentenceByWord(arr) {
+                    function WriteTextList(text , Time){
+                    AllCount += Time;
+                    let timeoutId = setTimeout(() => {
+                        ssa.innerHTML += text;
+                    }, AllCount);
+                    TalkBoxTimeOutIds.push(timeoutId);
+                    console.log(AllCount)
+                    }
+                    let ssa = document.getElementById("TalkingToUser");
+                    clearAllTimeouts()
+                    let AllCount = 0;
+                    arr.forEach( OneCircle => {
+                        ssa.innerHTML = "";
+                        OneCircle.forEach(str => {
+                            for (let count = 0; count < str.length; count++) {
+                                WriteTextList(str.slice(count , count + 1), 100)
+                            }
+                            WriteTextList("<br>", 500)
+                        });
+                    });
+                }
+                </script>
+            ';
+        }
         
     }
 

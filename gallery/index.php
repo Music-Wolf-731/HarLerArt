@@ -7,10 +7,6 @@
     <title>盼掌 - 殷</title>
     <?php  $DisplayFunction -> headWrite()?>
   
-    <style>
-        :root {
-        }
-    </style>
 
 </head>
 <body>
