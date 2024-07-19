@@ -1,138 +1,139 @@
-<?php  require 'display.php'; $DisplayFunction->GoHome_set(0); ?>
+<?php require 'display.php';
+$DisplayFunction->GoHome_set(0); ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>盼掌 - 殷</title>
-    <?php  $DisplayFunction->headWrite()?>
+    <?php $DisplayFunction->headWrite() ?>
     <style>
     </style>
 
 </head>
+
 <body>
 
 
 
 
 
-    
-    
-<?php $DisplayFunction->navBar(); $DisplayFunction->MwolfKillerBG();?>
 
 
-<div id="PageDisplay">
+    <?php $DisplayFunction->navBar();
+    $DisplayFunction->MwolfKillerBG(); ?>
 
 
-<div id="LandPangeMakerBrief">
-    <div class="ImgBox"></div>
-    <div class="TextBox">
-        <h2>音狼哈勒</h2>
-        <div class="line"></div>
-        <div class="TalkTextBox"><p id="TalkingToUser"></p></div>
-    </div>
-</div>
-<!-- 設計系出身，做了約一年多的平面設計<br>後續認為以工作的定位而言不太適合自己<br>轉而學習編碼的網頁工程師 -->
+    <div id="PageDisplay">
 
-<?php
-/*這個是當時單純想用來測SQL用的
-$pdo = new PDO('mysql:host=localhost;dbname=shop;charset=utf8','staff','password');
-print_r($pdo->query('select * from product'));
-echo '<br><br>';
-foreach ($pdo->query('select * from product') as $key => $value) {
-  print_r($value);
-}  ;
-*/
-$PaneArr = [
-    ['這是哪裡？','這是用於展示我的作品的網站，目前的規劃是以展示平面及自主創作的內容為用途，同時藉此作為一個簡單的實務專案來給予本網站一個實質意義，給予自己在建製該網站更明確的脈絡。'],
-    ['為何會想放棄平面，轉向網頁？','平面的侷限性太高，主觀性太強，他們總是管你「做出他們要的東西」叫成長，甚至要你感激涕零，但不曾想這些東西只有他們要'],
-    ['我嘗試做過哪些努力？','目前於一間中小企業任職，公司內僅有我一位網頁設計，為了更好的管理和控制，我在只有html、css、javascript的情況下硬是嘗試用javascript來刻屬於自己的版型(現在想來真的很蠢)，結果完成後才發現它無法被獲取資料，SEO變得一塌糊塗，於是我開始尋找其它替代方案，最後我在多種不一樣的選擇中選上了PHP，於是開始使用它架構模板，也因為各種嘗試，讓我愈發熟悉且擁有了不少種切版的方式和想法，實力已經超出公司所需後，我開始嘗試思考其它方案，我想要成為以網頁為主，設計為輔的工程師，所以又花錢開始學習react.js，嘗試跑一個自己的大型專案，目前正在資料庫和串接API的階段。'],
-    ['未來有哪些期許？','從接觸網頁到能刻出自己的模板那一刻時，就蠻希望可以成為一位全端工程師的，這需要投入十分多的資源和時間，也要有好的同伴和老師也因此我才想辦法花錢上課來投資自己，不過我認為更重要的是持續的進步、發展，以及進行更多的專案及創作，這就是為何我會希望可以換工作的原因，創造更多的自我價值，更好的成長和發展。'],
-];
+
+        <div id="LandPangeMakerBrief">
+            <div class="ImgBox"></div>
+            <div class="TextBox">
+                <h2>音狼哈勒</h2>
+                <div class="line"></div>
+                <div class="TalkTextBox">
+                    <p id="TalkingToUser"></p>
+                </div>
+            </div>
+        </div>
+        <!-- 設計系出身，做了約一年多的平面設計<br>後續認為以工作的定位而言不太適合自己<br>轉而學習編碼的網頁工程師 -->
+
+        <?php
+
+        $PaneArr = [
+            ['你是誰！不要殺我OAQ！！', '啊！！這.....這是開膛手傑克的主題cosplay啦\',\'我本人很溫和的，真的！！\',\'....嗯，希望你沒有過度恐慌，冒昧的自我介紹一下，我是音狼哈勒，主要興趣是畫圖，也喜歡遊戲、動畫和各類創作，種族是藍毛狼人，看到我染的紫黃雙色頭髮了嗎？\',\'挺顯眼的，我很喜歡，希望你也一樣喜歡uwu'],
+            ['這個黑漆麻烏的地方是哪裡？', '這裡是盼掌，嗯...是我取的名字\',\'我喜歡創作，我期盼我的手掌能夠締造無數可能，無論是畫圖也好、編碼也好。\',\'如果可以，我會一點一點的在這邊堆上我的作品，不嫌棄的話可以看看'],
+            ['平面不好嗎？為甚麼變成網頁工程師了？', '平面不好嗎...確實不好，大家總是覺得他們要的東西很簡單......行吧，也許真的是很簡單\',\'但......在傳達能力不夠好的人身上，再簡單的東西都是一場災難，我非常厭惡一邊猜一邊修一邊被質疑的過程，讓人心力交瘁而又憤愾\',\'而且平面的薪水又低，又沒甚麼翻身的機會，從生活品質到心理健康的角度來看，都無法發展成我想要的生活\',\'於是在我認真的在社會上掙扎了一兩年後剛好在一間公司任職時兼任了網頁設計公司的窗口時意外發現網頁比想像中有趣得多後，就果斷決定切換方針了'],
+            ['嘗試完後有甚麼感想呢？', '從我決定切換方針後，我發現相比設計我對網頁更加的有熱忱，更加有成就感\',\'我的目標從滿足、盲猜著想誰想要甚麼樣的東西變成了我有沒有能力完成任務\',\'從為了幾像素的差異花上數個小時，變成了幾秒鐘就能將資料快速調用和撤除\',\'版面再大也不會卡頓，不會有輸出問題等等的狀況，每一個字的編碼，都可以變成實質的經驗\',\'每一次的調整和設計，都有再續和發展的可能\',\'甚至它們也可以變成幫助我成長的更快的工具\',\'我每一鍵下所輸出的內容，都充滿意義'],
+            ['我嘗試做過哪些努力？', '哈，這會是一個很長~~~~的故事\',\'提醒一下問題旁邊的小方塊可以直接把文本叫出來，就不用看我慢慢說囉\',\'最一開始基本都是全自學，當初甚至還是使用NotePad++，基本沒有任何提示字元\',\'但我還是拼死拼活的寫了一個很破的落地頁，當時還覺得自己用javaScript寫導覽列很神呢....\',\'之後當我換了一份半正式以網頁為主的工作後，就覺得一頁一頁調整html很沒有效益\',\'檔案雜亂無章，維護困難，常常很容易因為一點疏漏就跑版，再花大量的時間去翻找編碼問題\',\'於是當下我使用了我認為最有變化性，能用於渲染的javascript來寫模板，當時在工作空檔嘗試花了快三個月，終於寫成了\',\'在我測試完並興高采烈的將它上架後，我就發現了一個極端致命的問題，爬蟲無法抓取在網頁讀取完後執行的javaScript指令\',\'意思是在所有的搜尋引擎、所有SEO，讀到我的網頁全部都是空白的\',\'這在一個公司展示網站絕對是一個災難級別的結果，只慶幸發現的還算早，對SEO的影響並不大...\',\'接著我就明白用javaScript是完全無法作為渲染工具使用的，於是在我各種查找，確認過伺服器環境後，我鎖定了最安全的選項：PHP\',\'當我開始學習並使用PHP後，就像是發現了新大陸一樣，所有渲染問題全部都有比js簡單數十倍的渲染方式\',\'即使對當時的我來說仍然因為不熟而切編碼切得亂七八糟，但還是成功完成了\',\'使用大量的陣列數據去做渲染，既保證了網頁的維護性，又可以正常被爬蟲搜尋\',\'於是我一邊將公司常態編輯的各種網頁模板化，一邊學習更多的編碼\',\'直到現在，目前工作的內容對我而言已經輕而易舉，有很多的時間可以去鑽研更多的技術了'],
+            ['未來有哪些期許？', '我想做全端，我想弄出酷酷的功能性平台\',\'正在努力學習react.js，想製作一個用於商用委託的平台'],
+        ];
 
 
 
-WriteLandingPagePane($PaneArr);
+        WriteLandingPagePane($PaneArr);
 
-function WriteLandingPagePane($arr){
-    $var = 0;$ForReturn = '';$jsCode='';
-    foreach ($arr as $key => $value) {
-        $jsCode .= "[['$value[1]']],";
-        $var++;$varStr = "DropDownPane_".$var;
-        $ForReturn .= 
-        '
+        function WriteLandingPagePane($arr)
+        {
+            $var = 0;
+            $ForReturn = '';
+            $jsCode = '';
+            foreach ($arr as $key => $value) {
+                $jsCode .= "[['$value[1]']],";
+                $var++;
+                $varStr = "DropDownPane_" . $var;
+                $ForReturn .=
+                    '
             <div>
                 <div class="TextPane">
-                    <div><h3>'.$value[0].'</h3></div> 
-                    <div data-bs-toggle="collapse" data-bs-target="#'.$varStr.'" aria-expanded="false" aria-controls="'.$varStr.'"></div>
-                    <div class="collapse multi-collapse" id="'.$varStr.'"><p>'.$value[1].'</p></div>
-                    <div class="talkEventbox" onclick="printSentenceByWord(ToLarnPageTalk['.$key.'])"></div>
+                    <div><h3>' . $value[0] . '</h3></div> 
+                    <div data-bs-toggle="collapse" data-bs-target="#' . $varStr . '" aria-expanded="false" aria-controls="' . $varStr . '"></div>
+                    <div class="collapse multi-collapse" id="' . $varStr . '"><p>' . $value[1] . '</p></div>
+                    <div class="talkEventbox" onclick="printSentenceByWord(ToLarnPageTalk[' . $key . '])"></div>
                 </div>  
             </div>
         ';
-    }
-    $ForReturn = "<script>var ToLarnPageTalk = [$jsCode];</script>".'<div id="ContentDisplay">'.$ForReturn.'</div>';
+            }
+            $ForReturn = "<script>var ToLarnPageTalk = [$jsCode];</script>" . '<div id="ContentDisplay">' . $ForReturn . '</div>';
 
-    echo $ForReturn;
-}
-?>
-
-
-
-</div>
-
-<script>
+            echo $ForReturn;
+        }
+        ?>
 
 
-  let TalkBoxTimeOutIds = [];
 
-  function clearAllTimeouts() {
-      for (let i = 0; i < TalkBoxTimeOutIds.length; i++) {
-          clearTimeout(TalkBoxTimeOutIds[i]);
-      }
-      TalkBoxTimeOutIds = [];
-  }  
+    </div>
 
-  
-  function printSentenceByWord(arr) {
+    <script>
+        let TalkBoxTimeOutIds = [];
 
-    function WriteTextList(text , Time){
-      AllCount += Time;
-      let timeoutId = setTimeout(() => {
-        ssa.innerHTML += text;
-      }, AllCount);
-      TalkBoxTimeOutIds.push(timeoutId);
-      console.log(AllCount)
-    }
+        function clearAllTimeouts() {
+            TalkBoxTimeOutIds.forEach(id => clearTimeout(id));
+            TalkBoxTimeOutIds = [];
+        }
 
-    let ssa = document.getElementById('TalkingToUser');
-    clearAllTimeouts()
-    let AllCount = 0;
-      arr.forEach( OneCircle => {
-          ssa.innerHTML = '';
-          OneCircle.forEach(str => {
-              for (let count = 0; count < str.length; count++) {
-                
-                WriteTextList(str.slice(count , count + 1), 100)
-                
-              }
-              WriteTextList("<br>", 500)
-          });
-      });
-    
-      
-      
-  }
 
-  // 测试
-  const arr = [["嗨，我看見你了，我相信你是從某個特別的渠道進入這裡的，對吧？","這裡不常有新朋友，歡迎你的到來。","我先簡單介紹一下吧，我是設計系出身，做了約一年多的平面設計，在認真嘗試後我覺得我並不喜歡以平面設計作為工作，所以我轉而開始學習編碼讓自己成為網頁工程師。","創作對我而言充滿意義和憧憬，但我也覺得對我而言可能並不適合將它當作本職，十分剛好的我從小邏輯能力就很好，也喜歡解決難題，於是我開始嘗試用這些編碼來實現和展示我的創作，我很喜歡這個過程。","啊，感覺我講得有點久，不如你就針對以下的問題向我提問吧，有沒有甚麼好奇的呢？","（你看見他嘗試逼自己擠出親切的微笑．．．雖然看起來好像是準備隨時衝過來咬你一口的瘋狗，但你知道他已經盡力了，請你原諒他吧。）"]];
-  printSentenceByWord(arr);
+        function printSentenceByWord(arr) {
+            clearAllTimeouts()
+            let AllCount = 0;
 
-  console.log(str.slice(0, 3))
-</script>
+
+            //設置新文字以及渲染等待時間
+            function WriteTextList(text, Time) {
+                AllCount += Time;
+                let timeoutId = setTimeout(() => {
+                    ssa.innerHTML += text;
+                }, AllCount);
+                TalkBoxTimeOutIds.push(timeoutId);
+                console.log(AllCount)
+            }
+
+            let ssa = document.getElementById('TalkingToUser');
+            arr.forEach(OneCircle => {
+                ssa.innerHTML = '';
+                OneCircle.forEach(str => {
+                    for (let count = 0; count < str.length; count++) {
+                        WriteTextList(str.slice(count, count + 1), 30)
+                    }
+                    WriteTextList("<br>", 2000)
+                });
+            });
+        }
+
+        // 测试
+        const arr = [
+            ["嗨，我看見你了，我相信你是從某個特別的渠道進入這裡的，對吧？", "這裡不常有新朋友，歡迎你的到來。", "我先簡單介紹一下吧，我是設計系出身，做了約一年多的平面設計，在認真嘗試後我覺得我並不喜歡以平面設計作為工作，所以我轉而開始學習編碼讓自己成為網頁工程師。", "創作對我而言充滿意義和憧憬，但我也覺得對我而言可能並不適合將它當作本職，十分剛好的我從小邏輯能力就很好，也喜歡解決難題，於是我開始嘗試用這些編碼來實現和展示我的創作，我很喜歡這個過程。", "啊，感覺我講得有點久，不如你就針對以下的問題向我提問吧，有沒有甚麼好奇的呢？"]
+        ];
+        printSentenceByWord(arr);
+
+        console.log(str.slice(0, 3))
+    </script>
 
 
 
 </body>
-<?php $DisplayFunction -> footer() ?>
+<?php $DisplayFunction->footer() ?>
+
 </html>

@@ -1,65 +1,68 @@
 @import "var.css";
 
 body {
-    background:var(--Pagebackground) !important;
-    display:flex;flex-wrap: wrap;
+    background: var(--Pagebackground) !important;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-#TopBar{
+#TopBar {
     background: var(--main-color);
-    width:100%;
+    width: 100%;
     position: fixed;
     top: 0;
 }
+
 #main_vis_wall {
-    overflow:hidden;
-    width:100%;
+    overflow: hidden;
+    width: 100%;
 }
 
 
-#ContentDisplay > div{
+#ContentDisplay>div {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width:100%;
+    width: 100%;
 }
 
 #LandPangeMakerBrief {
     color: var(--main-text-color);
-    margin:.8em 0;
-    display:flex;
+    margin: .8em 0;
+    display: flex;
     align-items: center;
-    width:100%;
+    width: 100%;
     background: var(--Pagebackground_d);
 }
 
-#LandPangeMakerBrief > .ImgBox{
-    width:calc(var(--L_Size_unit));height: calc(var(--L_Size_unit));
+#LandPangeMakerBrief>.ImgBox {
+    width: calc(var(--L_Size_unit));
+    height: calc(var(--L_Size_unit));
     border-radius: 10px;
     margin: .5em;
     /* background:black; */
     background-image: url('../media/116369272_p1.png');
-    background-size:cover;
+    background-size: cover;
 }
 
-#LandPangeMakerBrief > .TextBox{
-    width:calc(100% - calc(var(--L_Size_unit))); 
+#LandPangeMakerBrief>.TextBox {
+    width: calc(100% - calc(var(--L_Size_unit)));
     height: calc(var(--L_Size_unit));
     flex-direction: column;
     margin: .5em;
-    display:flex;
+    display: flex;
     /* background:white; */
 }
 
 #LandPangeMakerBrief h2 {
-    color: var(--TitleText); 
+    color: var(--TitleText);
     opacity: var(--hidden);
-    margin:.35em;
+    margin: .35em;
     font-size: 1.5em;
 }
 
-#LandPangeMakerBrief .TalkTextBox{
-    width:100%;
+#LandPangeMakerBrief .TalkTextBox {
+    width: 100%;
     max-height: calc(100% - 1.85em - 2px);
     overflow-y: scroll;
     scrollbar-width: none;
@@ -70,16 +73,16 @@ body {
 }
 
 #LandPangeMakerBrief p {
-    margin:0;
+    margin: 0;
     color: var(--ContentText);
     opacity: var(--hidden);
     font-size: calc(var(--L_Size_unit) / 13 + 8px);
 }
 
 #LandPangeMakerBrief .line {
-    height:2px;
-    width:100%;
-    background:  linear-gradient(90deg, rgb(187, 86, 255) 40%, rgba(187, 21, 252, 0.559) 60%,  rgba(255, 255, 255, 0) 100%);
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(90deg, rgb(187, 86, 255) 40%, rgba(187, 21, 252, 0.559) 60%, rgba(255, 255, 255, 0) 100%);
 }
 
 .TextPane {
@@ -89,9 +92,9 @@ body {
     display: flex;
     align-items: center;
     overflow: hidden;
-    width:96%;
+    width: 96%;
     padding: 10px;
-    margin:10px;
+    margin: 10px;
     border-radius: 10px;
     background: rgba(0, 0, 0, 0.4);
     flex-wrap: wrap;
@@ -105,78 +108,85 @@ body {
 }
 
 .TextPane div {
-    width:100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.TextPane div:nth-child(1){
-    width:calc(100% - 3em);
+.TextPane div:nth-child(1) {
+    width: calc(100% - 3em);
 }
 
-.TextPane div:nth-child(2){
+.TextPane div:nth-child(2) {
     position: absolute;
     z-index: 2;
-    width:30px;height:30px;
+    width: 30px;
+    height: 30px;
     border: 2.5px solid white;
     border-radius: 10px;
-    right:1.2em;top:.5em;
+    right: 1.2em;
+    top: .5em;
     background: rgba(255, 255, 255, 0);
     transition: all 0.5s ease;
 }
 
 
-.TextPane div:nth-child(2):hover{
+.TextPane div:nth-child(2):hover {
     background: rgba(255, 255, 255);
     border: 0px solid white;
 }
 
-.TextPane div:nth-child(3){
+.TextPane div:nth-child(3) {
     margin: 5px 0 0;
     border-top: .3px solid #ffffff90;
-    width:100%;
+    width: 100%;
 }
 
-.TextPane .talkEventbox{
-    width:100%;height:100%;
+.TextPane .talkEventbox {
+    width: 100%;
+    height: 100%;
     position: absolute;
-    top:0;left:0;
+    top: 0;
+    left: 0;
     z-index: 1;
 }
 
 
-.TextPane h3{
-    margin:.05em 0;
+.TextPane h3 {
+    margin: .05em 0;
     font-size: 1.3em;
     text-align: center;
     color: var(--main-text-color);
 }
 
-.TextPane p{
-    margin:.8em;
-    color:rgba(255, 255, 255, 0.632);
+.TextPane p {
+    margin: .8em;
+    color: rgba(255, 255, 255, 0.632);
 }
 
-.backgroundBox{
+.backgroundBox {
     position: fixed;
-    top: 0;left: 0;
+    top: 0;
+    left: 0;
     z-index: -1;
 }
 
-.backgroundBox > div:first-child {
+.backgroundBox>div:first-child {
     position: absolute;
-    top: 0;left: 0;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
-    background:  var(--Pagebackground_c);
+    background: var(--Pagebackground_c);
     opacity: .98;
     z-index: 1;
-    
+
 }
 
 .video-background {
     position: absolute;
-    top: 0;left: 0;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -195,13 +205,22 @@ body {
     transform: translate(-50%, -50%);
 }
 
-#TopBar a{
-    color:  var(--main-text-color);
+#TopBar .dropdown-menu a {
+    color: var(--main-text-color);
 }
 
-.modal-content > button {
+.dropdown-menu {
+    background: var(--Pagebackground);
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+    background: var(--ContentText);
+}
+
+.modal-content>button {
     position: absolute;
-    right:0;
+    right: 0;
 }
 
 
@@ -209,15 +228,20 @@ body {
     width: 60%;
     color: var(--main-text-color);
 }
-#SideMenu{
+
+#SideMenu {
     width: 40%;
 }
 
-.btn-close{
+.btn-close {
     filter: invert(100%);
 }
 
 @media screen and (max-width: 1000px) {
-    #PageDisplay,#SideMenu{width:100%;}
+
+    #PageDisplay,
+    #SideMenu {
+        width: 100%;
+    }
 
 }
