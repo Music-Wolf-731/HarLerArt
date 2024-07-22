@@ -48,7 +48,7 @@ class displayFunction
         $GLvar = $GLOBALS['GoHome'];
         echo '
             <div style="height: 56px;width:100%;"></div>
-            <nav id="TopBar" class="navbar navbar-expand-sm navbar-dark" aria-label="Third navbar example">
+            <nav id="TopBar" class="navbar navbar-expand-sm navbar-dark" aria-label="Third navbar example" style="z-index:300;">
                 <div class="container-fluid">
                 <a class="navbar-brand" href="' . $GLvar . '.">盼掌-殷</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
