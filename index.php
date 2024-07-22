@@ -109,7 +109,7 @@ $DisplayFunction->GoHome_set(0); ?>
                     ssa.innerHTML += text;
                 }, AllCount);
                 TalkBoxTimeOutIds.push(timeoutId);
-                console.log(AllCount)
+                // console.log(AllCount)
             }
 
             let ssa = document.getElementById('TalkingToUser');
@@ -131,11 +131,24 @@ $DisplayFunction->GoHome_set(0); ?>
 
         // 测试
         const arr = [
-            ["嗨，我看見你了，我相信你是從某個特別的渠道進入這裡的，對吧？", "這裡不常有新朋友，歡迎你的到來，希望你喜歡我的落地頁。", "雖然談不上完整，但好歹還是盡力去製作的", "簡單介紹一下，我是多媒體設計系出身, 並於某次契機轉而開始學習編碼努力讓自己成為網頁工程師的哈勒。", "不說太多了，下面有甚麼問題直接問吧", "我會盡我所能回答的"]
+            ["嗨，你好，難得來了，不妨坐下喝杯茶如何？", "如果沒意外的話，你剛剛看到的那個飄浮的傢伙也是我，來這換了個風格，應該還是免強認得出來吧？", "簡單介紹一下，我是音狼哈勒，多媒體設計出身，做了一段時間的平面後因為一點契機轉行的網頁前端", "但我相信你不會想聽我滔滔不絕，所以我準備了下面這些問題，隨意點點吧，我會盡我所能回答的", "噢，提示一下，問題旁邊的小方格可以直接將文本叫出來，不用看我慢慢講哦"]
         ];
         printSentenceByWord(arr);
 
-        console.log(str.slice(0, 3))
+
+        //調整問題div的高度
+        function adjustHeight() {
+            var contentDisplay = document.getElementById('ContentDisplay');
+            var rect = contentDisplay.getBoundingClientRect();
+            var distanceFromTop = rect.top + window.scrollY;
+            var newHeight = `calc(100vh - ${distanceFromTop}px)`;
+            contentDisplay.style.height = newHeight;
+        }
+
+        adjustHeight()
+        setTimeout(adjustHeight, 100);
+
+        window.addEventListener('resize', setTimeout(adjustHeight, 100));
     </script>
 
 

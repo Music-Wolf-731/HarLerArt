@@ -69,9 +69,8 @@ class displayFunction
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="' . $GLvar . '" data-bs-toggle="dropdown" aria-expanded="false">網頁相關</a>
                         <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="' . $GLvar . '">Action</a></li>
-                        <li><a class="dropdown-item" href="' . $GLvar . '">Another action</a></li>
-                        <li><a class="dropdown-item" href="' . $GLvar . '">Something else here</a></li>
+                        <li><a class="dropdown-item" href="' . $GLvar . '/../SQLNoteTool">哈勒筆記</a></li>
+                        <li><a class="dropdown-item" href="' . $GLvar . '">投射距離模擬器(商)</a></li>
                         </ul>
                     </li>
                     </ul>

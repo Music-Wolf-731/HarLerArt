@@ -18,6 +18,10 @@ body {
     width: 100%;
 }
 
+#ContentDisplay {
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
 
 #ContentDisplay>div {
     display: flex;
@@ -236,6 +240,8 @@ body {
 #PageDisplay {
     width: 60%;
     color: var(--main-text-color);
+    overflow: auto;
+
 }
 
 #SideMenu {
