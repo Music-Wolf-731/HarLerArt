@@ -260,7 +260,7 @@ body {
     }
 
     html {
-        font-size: .6em;
+        font-size: calc(var(--L_Size_unit) / 15 + 4px);
     }
 
 }
