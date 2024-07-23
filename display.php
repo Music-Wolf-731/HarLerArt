@@ -70,7 +70,7 @@ class displayFunction
                         <a class="nav-link dropdown-toggle" href="' . $GLvar . '" data-bs-toggle="dropdown" aria-expanded="false">網頁相關</a>
                         <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="' . $GLvar . '/../SQLNoteTool">哈勒筆記</a></li>
-                        <li><a class="dropdown-item" href="' . $GLvar . '">投射距離模擬器(商)</a></li>
+                        <li><a class="dropdown-item" href="' . $GLvar . '/../calDemo">投射換算器</a></li>
                         </ul>
                     </li>
                     </ul>
